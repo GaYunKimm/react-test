@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 
 class TOC extends Component {
   render() {
+    console.log('toc render');
     const lists = [];
     let data = this.props.data;
     let i = 0;
