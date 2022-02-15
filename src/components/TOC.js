@@ -2,6 +2,15 @@ import React, { Component } from 'react';
 //import './App.css';
 
 class TOC extends Component {
+  shouldComponentUpdate(newProps, newState) {
+   // console.log('===>toc shold render', newProps.data, newState.data);
+    if (this.props.data === newProps.data) {
+      return false;
+    }
+
+    return true;
+  }
+
   render() {
     console.log('toc render');
     const lists = [];
